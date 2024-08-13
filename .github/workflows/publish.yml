@@ -16,7 +16,7 @@ on:
   push:
     branches: main
     paths:
-      - 'slides/presentation.qmd'
+      - 'slides/index.qmd'
       - '**.yml'
 
 jobs:
