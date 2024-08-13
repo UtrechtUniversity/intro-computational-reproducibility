@@ -16,7 +16,7 @@ on:
   push:
     branches: main
     paths:
-      - 'slides/index.qmd'
+      - 'slides/presentation.qmd'
       - '**.yml'
 
 jobs:
@@ -46,7 +46,6 @@ jobs:
           packages: |
             any::knitr
             any::rmarkdown
-            any::reticulate
 
       - name: Setup Pages
         uses: actions/configure-pages@v1
@@ -57,7 +56,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'slides/_site'
+          path: 'slides/_presentation'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
