@@ -52,12 +52,12 @@ jobs:
         uses: actions/configure-pages@v1
 
       - name: Render Website
-        run: quarto render book/
+        run: quarto render slides/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'book/_site'
+          path: 'slides/_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
