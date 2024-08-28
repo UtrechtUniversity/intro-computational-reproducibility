@@ -248,13 +248,291 @@ Image source: [Geek & Poke](https://geekandpoke.typepad.com/geekandpoke/2011/06/
 
 # 4. Code quality
 
-## Code quality
+## Aspects of good quality code
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+::: {style="text-align: left; margin-top: 2em"}
+
+- Readable
+- Reusable
+- (Robust)
+
+:::
+:::
+::: {.column width="0%"}
+:::
+::: {.column width="55%"}
+
+![Source: [xkcd](https://xkcd.com/1513/)](https://imgs.xkcd.com/comics/good_code.png){fig-align="center" width=50%}
+
+:::
+::::
+
+## Code readability: white space
+
+::: {.theme-section}
+
+::: {.fragment .strike}
+Code is for computer, comments are for humans.
+:::
+
+. . .
+
+- Use whitespace and newlines strategically.
+
+. . .
+
+<!-- ::: {.fragment .fade-in-then-out} -->
+
+#### Compare:
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+<!-- ::: {style="text-align: left; margin-top: 2em"} -->
+```r
+this <- function(arg1,arg2) res<-arg1*arg2;return(res)
+hurts <- mean(c(this(3,4),this(3,1),this(9,9))); print(hurts)
+```
+:::
+
+::: {.column width="30%"}
+
+
+```r
+this <- function(arg1,arg2){
+  res <- arg1 * arg2
+  return(res)
+}
+
+hurts <- mean(
+  c(
+    this(3,4),
+    this(3,1),
+    this(9,9)
+    )
+  )
+print(hurts)
+```
+
+:::
+::::
+:::
+
+<!-- ::: -->
+
+## Code readability: names
+
+::: {.theme-section}
+
+- use descriptive names for functions and variables
+  - start functions with a verb
+  - make variable names _just_ long enough to be meaningful
+
+. . .
+
+#### Compare:
+:::: {.columns}
+::: {.column width="50%"}
+```python
+for i in my_shopping_basket:
+  if(test(i)) > 10:
+    purch(i)
+  else:
+    disc(i)
+```
+:::
+::: {.column width="50%"}
+```python
+for item in basket:
+  if(testNecessity(item)) > 10:
+    purchase(item)
+  else:
+    discard(item)
+```
+:::
+::::
+:::
+
+## Code readability: consistency
+
+::: {.theme-section}
+Consistency will make your code easier to understand and maintain
+
+  - consult a styleguide for your language (keep conventions, and don't reinvent the wheel)
+  - use tools to enforce style (linters, formatters)
+
+:::
+
+## Language specific style guides and tools
+
+::: {.theme-section}
+
+|             | Python                                                                 | R                                      |
+|---------------------|------------------------------------------------------------------------|----------------------------------------|
+| Style Manual        | [Pep-8](https://www.python.org/dev/peps/pep-0008/)                     | [Tidyverse style guide](https://style.tidyverse.org) |
+| Linters             | [flake8](https://flake8.pycqa.org/en/latest/), [pylint](https://pylint.pycqa.org/en/latest/) | [lintr](https://lintr.r-lib.org/)      |
+| Formatters          | [black](https://pypi.org/project/black/)                               | [styler](https://styler.r-lib.org/)    |
+
+:::
+
+## Code reusability: some guidelines
+
+::: {.theme-section}
+
+- **Separate code and data**: data is specific, code need not be
+
+  - consider using a config file for project-specific (meta)data
+  - but DO hard-code unchanging variables, e.g. `gravity = 9.80665`, **once**.
+
+. . .
+
+- **Do One Thing** (and do it well)
+
+  - One function for one purpose
+  - One script for one purpose 
+
+Identify potential functions by action: functions perform tasks (e.g. sorting, plotting, saving a file, transform data...)
+
+Code you reuse often, is often a good candidate for a function
+
+:::
+
+## Code quality: concluding remarks 
+
+::: {.theme-section}
+
+- Code quality is important for reproducibility
+- Not only by others, but most importantly future YOU
+- Invest time in learning to write good code, it will pay off
+
+:::
 
 # 5. Git and GitHub
 
 ## GitHub
 
-::: theme-section
+## Why do you need version control?
+
+::: {.theme-section}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+![](http://www.phdcomics.com/comics/archive/phd101212s.gif){width=80%}
+
+::: {.column width="20%"}
+:::
+::: {.column width="40%"}
+
+![](../images/final-git.png){width=80% fig-align="center"}
+
+:::
+::::
+:::
+
+## What is git?
+
+::: {.theme-section}
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+- Distributed Version Control system written by Linus Torvalds (of Linux fame)
+
+- Allows you to:
+  - log snapshots of your project
+  - branch your work (so you can experiment without losing the original!)
+  - keep all backups
+  - while efficiently using your storage
+
+
+- Current standard for code
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="30%"}
+
+![](../images/screenshots/distributed.png){fig-align="center" width=70%}
+
+:::
+::::
+:::
+
+## GitHub, GitLab, Bitbucket, etc..
+
+::: {.theme-section}
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+- GitHub is an online platform for hosting your coding projects
+- Based on git
+- Social coding platform: share, collaborate, and contribute to projects
+
+- The UU has an [institutional GitHub](github.com/UtrechtUniversity)
+
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="30%"}
+
+![](../images/screenshots/distributed.png){fig-align="center" width=70%}
+
+:::
+::::
+:::
+
+## Terminology
+
+::: {.theme-section}
+
+- **Repository**: a project folder that is being tracked by git
+- **Commit**: a snapshot of your project at a certain point in time
+- **Branch**: a parallel version of your project
+- **Clone**: a copy of a GitHub repository on your PC
+
+:::
+
+## Git History
+
+```{mermaid}
+%%| echo: false
+%%| fig-width: 14
+gitGraph
+   commit id: "Intial commit"
+   commit id: "add my scripts"
+   commit id: "add plotting function"
+   commit id: "fix bug in plotting function"
+```
+
+## Working with git
+
+::: {.theme-section}
+- Firstly designed as a command line tool
+- Now also built into many IDEs (Rstudio, Visual Studio Code, etc.)
+- GUIs available (GitHub Desktop, Sourcetree, etc.)
+- Develop and run you code on your PC, regularly store your changes in git and push them to GitHub
+- Making changes via the GitHub website is also possible
+:::
+
+## Your turn: starting with git
+
+::: {.theme-section}
+Learning to use git efficiently takes time and practice.
+Take a course or workshop, or follow online tutorials to get started.
+We will now do a short workshop to familiarize you with GitHub
+
+edu.nl/TODO ADD LINK
 :::
 
 ## Bonus: dissemination
