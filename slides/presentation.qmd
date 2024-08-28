@@ -1,33 +1,286 @@
---- 
+---
+author: "Research Data Management Support"
 format: 
   revealjs:
+    pagetitle: "Introduction to Computational Reproducibility"
     theme: styles/uu.scss
     logo: images/UU_logo_2021_EN_RGB.png
-    footer: "Computational Reproducibility"
+    footer: "Intro to Computational Reproducibility"
 ---
 
-# Introduction to Computational Reproducibility{data-background-color="#FFCD00"}
+# Introduction to Computational Reproducibility {data-background-color="#FFCD00"}
+
+::: theme-section
+<https://utrechtuniversity.github.io/intro-computational-reproducibility>
+:::
 
 ## Contents
-::: {.theme-section}
--   Reproducibility
--   Project structure
--   Documentation
--   Code quality
--   GitHub
+
+::: theme-section
+1.  What is reproducibility?
+2.  Project organization
+3.  Documentation
+4.  Code quality
+5.  Git and GitHub
+6.  Resources
 :::
+
+# 1. What is reproducibility?
 
 ## Reproducibility
-::: {.theme-section}
 
+> A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer. ([The Turing Way Community, 2022](https://book.the-turing-way.org/reproducible-research/overview/overview-definitions))
 
+![](images/reproducibility_def_Scriberia-TuringWay.jpg){fig-align="center" width="70%"}
+
+::: footer
+The image was created by [Scriberia](http://www.scriberia.co.uk/) for The Turing Way community and is used under a CC-BY licence. <https://doi.org/10.5281/zenodo.3332808>.
 :::
+
+## Why reproducible code?
+
+::: columns
+::: {.column width="70%"}
+-   Know what you did last summer (without having to memorize it)
+-   Trust that your results are reliable and correct
+-   Others can re-use your methods
+-   Transparent science = trust in its results
+:::
+
+::: {.column width="30%"}
+![](https://imgs.xkcd.com/comics/future_self.png)
+:::
+:::
+
+::: footer
+See also: Five selfish reasons to work reproducibly ([Markowetz, 2015](https://doi.org/10.1186/s13059-015-0850-7))
+:::
+
+## What is needed for reproducibility?
+
+- 🗄️ The data
+
+. . .
+
+- 📰 The code
+
+. . .
+
+- 🧾 The analysis workflow
+
+. . .
+
+- 💻 The dependencies to run the code on the data (operating system, software, packages, etc.)
+
+. . .
+
+-   💬 Documentation, documentation, documentation
+
+## Reproducibility spectrum
+
+![](images/peng2011_reproducibility-spectrum.jpg)
+
+A study may be more or less reproducible than another depending on what data and code are made available ([Peng, 2011](https://doi.org/10.1126%2Fscience.1213847)).
+
+# 2. Project organization
 
 ## Project structure
 
-## Documentation
+::: columns
+::: {.column width="50%"}
+#### Why?
+
+- Easily find files
+- Colleagues understand what you do
+- Machine-readable files and folders (sorting, parsing)
+
+:::
+
+::: {.column width="50%"}
+:::  {.fragment}
+
+#### How?
+
+- Folder structure
+- File and folder naming
+- Version control
+
+:::
+:::
+
+:::
+
+
+## Folder structure
+
+::: columns
+::: {.column width="60%"}
+- Put all project-related documents in 1 project folder
+- Separate raw, intermediate and end outputs
+- Never edit raw data
+:::
+
+::: {.column width="40%"}
+```
+├───data
+│   ├───raw
+│   ├───processed
+│   └───temp
+├───docs
+├───results
+│   ├───figures
+│   └───output
+├───src
+├README.md
+└LICENSE
+```
+:::
+:::
+
+
+
+::: footer
+Project templates: [UtrechtUniversity/simple-r-project](https://github.com/UtrechtUniversity/simple-r-project) (R), [UtrechtUniversity/simple-python-template](https://github.com/UtrechtUniversity/simple-python-template/) (Python)
+:::
+
+## File and folder naming
+
+::: columns
+::: {.column width="40%"}
+
+- Meaningful & human-readable
+- No special characters (`&` `%` `$` `#` `/` `,` `+`), spaces or dots (`.`)
+- < 25 characters
+- Separate meaningful chunks by `-` or `_`
+
+:::
+
+::: {.column width="60%"}
+![](images/osf_human-readable-filenaming.png) 
+<br>
+
+![](images/osf_sortable-filenames.png)
+:::
+:::
+
+::: footer
+Images: [OSF's File naming Guide](https://help.osf.io/article/146-file-naming)
+:::
+
+# 3. Documentation
+
+## What is documentation?
+
+> Documentation provides context for your work. It allows your collaborators, colleagues and future you to understand what has been done and why. ([The Turing Way Community, 2022](https://book.the-turing-way.org/reproducible-research/rdm/rdm-metadata.html))
+
+. . .
+
+For example:
+
+- Project documentation (project proposal, analysis log, **README file**, etc.)
+
+. . .
+
+- Data documentation (e.g., codebook)
+
+. . .
+
+- Code documentation (e.g., **comments**, requirements.txt)
+
+## README file
+
+::: columns
+::: {.column width="50%"}
+
+#### Project information:
+
+- Who, what, when, where?
+- Files in the project folder
+- License
+- Contact details
+:::
+
+::: {.column width="50%"}
+:::  {.fragment}
+
+#### Code information:
+
+- Dependencies
+- Instructions for installation, configuration, usage
+- Known bugs
+- Troubleshooting
+
+:::
+:::
+:::
+
+::: footer
+See Utrecht University's [FAIR code cheatsheet](https://utrechtuniversity.github.io/FAIR-Cheatsheets/) and <https://www.makeareadme.com/>
+:::
+
+## Comments
+
+::: columns
+::: {.column width="73%"}
+
+Comments: annotations in your code that explain what your code does (to others, and your future self)
+
+- No replacement for clear and structured code
+- May be used to generate user documentation (if in specific format)
+- In Python & R, use `#` :
+
+    ```
+    # This line is not executed
+    print("Hello world") # This line is executed
+    ``` 
+
+:::
+
+::: {.column width="27%"}
+
+![](images/comments.jpeg)
+:::
+:::
+
+::: footer
+Image source: [Geek & Poke](https://geekandpoke.typepad.com/geekandpoke/2011/06/code-commenting-made-easy.html)
+:::
+
+# 4. Code quality
+
+## Code quality
+
+# 5. Git and GitHub
 
 ## GitHub
+
+::: theme-section
+:::
+
+## Bonus: dissemination
+
+- [Add a license](https://coderefinery.github.io/github-without-command-line/creating-using-web/#step-7-optional-adding-a-license-to-an-existing-repository) to your project
+
+. . .
+
+- Specify how people should [cite your code](https://citation-file-format.github.io/)
+
+. . .
+
+- Publish your [GitHub code on Zenodo](https://coderefinery.github.io/github-without-command-line/doi/) to get a DOI
+
+
+## Resources
+
+-   [Best Practices in Writing Reproducible Code](https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code) (workshop)
+-   [Programming Cafe](https://www.uu.nl/en/research/research-data-management/workshops/programming-cafe) (monthly)
+-   [Walk-In Hours Research Data & Software](https://www.uu.nl/en/research/research-data-management/workshops/walk-in-hours-research-data-and-software) (weekly)
+
+# Thank you! {data-background-color="#FFCD00"}
+
+::: theme-section
+<https://uu.nl/rdm>
+:::
 
 ## Template
 
@@ -130,6 +383,6 @@ plot(cars)
 Learn more: [Multiple Columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns)
 :::
 
-# {data-background-color="#FFCD00"}
+#  {data-background-color="#FFCD00"}
 
 ![](images/UU_logo_2021_EN_RGB_payoff.png)

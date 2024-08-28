@@ -1,21 +1,18 @@
 cff-version: 1.2.0
-title: Workshop Best Practices for Writing Reproducible Code
+title: Introduction Computational Reproducibility
 message: 'If you reuse our materials, please cite us!'
 type: software
 authors:
   - given-names: Research Data Management Support
     affiliation: Utrecht University
     email: info.rdm@uu.nl
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.8167841
-    description: The concept DOI for the collection of these materials.
 repository-code: >-
-  https://github.com/UtrechtUniversity/workshop-computational-reproducibility
+  https://github.com/UtrechtUniversity/intro-computational-reproducibility
 url: 'https://uu.nl/rdm'
 abstract: >
-  This repository contains the materials for the two-day
-  workshop 'Best Practices in Writing Reproducible Code',
+  This repository contains the materials for a 1.5 hour workshop on
+  computational reproducibility. It is a shortened version from the
+  2-day workshop 'Best Practices in Writing Reproducible Code',
   organized by Research Data Management Support at Utrecht
   University, the Netherlands.
 keywords:
@@ -29,5 +26,5 @@ keywords:
   - robustness
   - workshop
 license: CC-BY-4.0
-version: 2023.07.21
-date-released: '2023-07-21'
+version: 2024.09.04
+date-released: '2024-09-04'
