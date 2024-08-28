@@ -6,6 +6,21 @@ format:
     theme: styles/uu.scss
     logo: images/UU_logo_2021_EN_RGB.png
     footer: "Intro to Computational Reproducibility"
+    menu: false
+    progress: true
+    width: 1920
+    height: 1080
+    margin: 0.1
+    embed-resources: true
+    slide-number: true
+    navigation-mode: linear
+    controls: true
+    code-line-numbers: false
+    mermaid-format: png
+search: false
+execute:
+  enabled: false
+  echo: true
 ---
 
 # Introduction to Computational Reproducibility {data-background-color="#FFCD00"}
@@ -279,11 +294,7 @@ Image source: [Geek & Poke](https://geekandpoke.typepad.com/geekandpoke/2011/06/
 Code is for computer, comments are for humans.
 :::
 
-. . .
-
 - Use whitespace and newlines strategically.
-
-. . .
 
 <!-- ::: {.fragment .fade-in-then-out} -->
 
@@ -300,7 +311,7 @@ hurts <- mean(c(this(3,4),this(3,1),this(9,9))); print(hurts)
 ```
 :::
 
-::: {.column width="30%"}
+::: {.column width="40%"}
 
 
 ```r
@@ -333,8 +344,6 @@ print(hurts)
   - start functions with a verb
   - make variable names _just_ long enough to be meaningful
 
-. . .
-
 #### Compare:
 :::: {.columns}
 ::: {.column width="50%"}
@@ -366,17 +375,16 @@ Consistency will make your code easier to understand and maintain
   - consult a styleguide for your language (keep conventions, and don't reinvent the wheel)
   - use tools to enforce style (linters, formatters)
 
-:::
-
-## Language specific style guides and tools
-
-::: {.theme-section}
+<br>
+<br>
 
 |             | Python                                                                 | R                                      |
 |---------------------|------------------------------------------------------------------------|----------------------------------------|
 | Style Manual        | [Pep-8](https://www.python.org/dev/peps/pep-0008/)                     | [Tidyverse style guide](https://style.tidyverse.org) |
 | Linters             | [flake8](https://flake8.pycqa.org/en/latest/), [pylint](https://pylint.pycqa.org/en/latest/) | [lintr](https://lintr.r-lib.org/)      |
 | Formatters          | [black](https://pypi.org/project/black/)                               | [styler](https://styler.r-lib.org/)    |
+
+: {.striped}
 
 :::
 
@@ -388,8 +396,6 @@ Consistency will make your code easier to understand and maintain
 
   - consider using a config file for project-specific (meta)data
   - but DO hard-code unchanging variables, e.g. `gravity = 9.80665`, **once**.
-
-. . .
 
 - **Do One Thing** (and do it well)
 
@@ -426,11 +432,14 @@ Code you reuse often, is often a good candidate for a function
 
 ![](http://www.phdcomics.com/comics/archive/phd101212s.gif){width=80%}
 
+:::
 ::: {.column width="20%"}
 :::
 ::: {.column width="40%"}
 
-![](../images/final-git.png){width=80% fig-align="center"}
+<br> 
+
+![](./images/final-git.png){width=100% fig-align="center"}
 
 :::
 ::::
@@ -442,9 +451,9 @@ Code you reuse often, is often a good candidate for a function
 
 :::: {.columns}
 
-::: {.column width="65%"}
+::: {.column width="60%"}
 
-- Distributed Version Control system written by Linus Torvalds (of Linux fame)
+- Distributed Version Control system written by Linus Torvalds
 
 - Allows you to:
   - log snapshots of your project
@@ -458,9 +467,9 @@ Code you reuse often, is often a good candidate for a function
 :::
 ::: {.column width="5%"}
 :::
-::: {.column width="30%"}
+::: {.column width="35%"}
 
-![](../images/screenshots/distributed.png){fig-align="center" width=70%}
+![](./images/screenshots/distributed.png){fig-align="center" width=80%}
 
 :::
 ::::
@@ -472,7 +481,7 @@ Code you reuse often, is often a good candidate for a function
 
 :::: {.columns}
 
-::: {.column width="65%"}
+::: {.column width="60%"}
 
 - GitHub is an online platform for hosting your coding projects
 - Based on git
@@ -484,9 +493,9 @@ Code you reuse often, is often a good candidate for a function
 :::
 ::: {.column width="5%"}
 :::
-::: {.column width="30%"}
+::: {.column width="35%"}
 
-![](../images/screenshots/distributed.png){fig-align="center" width=70%}
+![](./images/screenshots/distributed.png){fig-align="center" width=80%}
 
 :::
 ::::
@@ -507,7 +516,7 @@ Code you reuse often, is often a good candidate for a function
 
 ```{mermaid}
 %%| echo: false
-%%| fig-width: 14
+%%| fig-width: 12
 gitGraph
    commit id: "Intial commit"
    commit id: "add my scripts"

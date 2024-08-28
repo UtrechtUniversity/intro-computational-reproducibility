@@ -42,7 +42,7 @@ $code-color: #883080 !default;
 $font-family-monospace: 'Inconsolata', monospace  !default;
 $code-color: #900C3F;
 $code-bg: #F7F7F7;  
-$code-block-font-size: 1em;
+$code-block-font-size: 0.8em;
 $code-block-bg: #F7F7F7;
 
 
@@ -108,7 +108,7 @@ section.has-dark-background a, section.has-dark-background a:hover {
 .slide-logo {
   display: block !important;
   position: fixed !important;
-  top: 0% !important;
+  top: 3% !important;
   left: 80% !important;
   max-height: 10% !important;
   height: 100% !important;
@@ -121,4 +121,11 @@ section.has-dark-background a, section.has-dark-background a:hover {
   right: 10px !important;
   top: unset !important;
   color: #000000 !important;
+}
+
+.table-striped {
+  font-size: smaller;
+  > tbody > tr:nth-of-type(odd) > * {
+    background-color: #f2f2f2d5;
+  }
 }
