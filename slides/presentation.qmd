@@ -16,7 +16,6 @@ format:
     navigation-mode: linear
     controls: true
     code-line-numbers: false
-    mermaid-format: png
 search: false
 execute:
   enabled: false
@@ -514,15 +513,7 @@ Code you reuse often, is often a good candidate for a function
 
 ## Git History
 
-```{mermaid}
-%%| echo: false
-%%| fig-width: 12
-gitGraph
-   commit id: "Intial commit"
-   commit id: "add my scripts"
-   commit id: "add plotting function"
-   commit id: "fix bug in plotting function"
-```
+![](./images/git-mermaid.png)
 
 ## Working with git
 
