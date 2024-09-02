@@ -25,7 +25,7 @@ execute:
 # Introduction to Computational Reproducibility {data-background-color="#FFCD00"}
 
 ::: theme-section
-<https://utrechtuniversity.github.io/intro-computational-reproducibility>
+<https://edu.nl/a4qwd>
 :::
 
 ## Contents
@@ -100,6 +100,7 @@ A study may be more or less reproducible than another depending on what data and
 
 ## Project structure
 
+::: {.theme-section-large}
 ::: columns
 ::: {.column width="50%"}
 #### Why?
@@ -123,9 +124,11 @@ A study may be more or less reproducible than another depending on what data and
 :::
 
 :::
-
+:::
 
 ## Folder structure
+
+::: {.theme-section-large}
 
 ::: columns
 ::: {.column width="60%"}
@@ -151,13 +154,15 @@ A study may be more or less reproducible than another depending on what data and
 :::
 :::
 
-
+:::
 
 ::: footer
 Project templates: [UtrechtUniversity/simple-r-project](https://github.com/UtrechtUniversity/simple-r-project) (R), [UtrechtUniversity/simple-python-template](https://github.com/UtrechtUniversity/simple-python-template/) (Python)
 :::
 
 ## File and folder naming
+
+::: {.theme-section-large}
 
 ::: columns
 ::: {.column width="40%"}
@@ -176,7 +181,7 @@ Project templates: [UtrechtUniversity/simple-r-project](https://github.com/Utrec
 ![](images/osf_sortable-filenames.png)
 :::
 :::
-
+:::
 ::: footer
 Images: [OSF's File naming Guide](https://help.osf.io/article/146-file-naming)
 :::
@@ -559,108 +564,3 @@ edu.nl/TODO ADD LINK
 ::: theme-section
 <https://uu.nl/rdm>
 :::
-
-## Template
-
--   Highlight specific lines for emphasis
--   Incrementally highlight additional lines
-
-``` {.python code-line-numbers="4-5|7|10"}
-import numpy as np
-import matplotlib.pyplot as plt
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
-```
-
-::: footer
-Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
-:::
-
-## Executable Code
-
-```{r}
-#| echo: true
-#| fig-width: 10
-#| fig-height: 4.5
-plot(cars)
-```
-
-::: footer
-Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
-:::
-
-## LaTeX Equations
-
-[MathJax](https://www.mathjax.org/) rendering of equations to HTML
-
-::: columns
-::: {.column width="40%"}
-``` tex
-\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*}
-\begin{align}
-a_{11}& =b_{11}&
-  a_{12}& =b_{12}\\
-a_{21}& =b_{21}&
-  a_{22}& =b_{22}+c_{22}
-\end{align}
-```
-:::
-
-::: {.column width="60%"}
-```{=tex}
-\begin{gather*}
-a_1=b_1+c_1\\
-a_2=b_2+c_2-d_2+e_2
-\end{gather*}
-```
-```{=tex}
-\begin{align}
-a_{11}& =b_{11}&
-  a_{12}& =b_{12}\\
-a_{21}& =b_{21}&
-  a_{22}& =b_{22}+c_{22}
-\end{align}
-```
-:::
-:::
-
-::: footer
-Learn more: [LaTeX Equations](https://quarto.org/docs/authoring/markdown-basics.html#equations)
-:::
-
-## Column Layout {.smaller}
-
-Arrange content into columns of varying widths:
-
-::: columns
-::: {.column width="35%"}
-#### Motor Trend Car Road Tests
-
-The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.
-:::
-
-::: {.column width="3%"}
-:::
-
-::: {.column width="62%"}
-```{r}
-plot(cars)
-```
-:::
-:::
-
-::: footer
-Learn more: [Multiple Columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns)
-:::
-
-#  {data-background-color="#FFCD00"}
-
-![](images/UU_logo_2021_EN_RGB_payoff.png)
