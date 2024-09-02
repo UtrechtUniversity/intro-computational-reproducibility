@@ -1,29 +1,48 @@
 # Introduction to Computational Reproducibility
 
-_If you are looking at a GitHub README, please note that the slides are available via https://utrechtuniversity.github.io/intro-computational-reproducibility/)._
-
-This is the GitHub repository containing the slides for an 1.5 hour Introduciton to Computational Reproducibility. 
+This is the GitHub repository containing the slides and exercises for an 1.5 hour Introduciton to Computational Reproducibility. 
 This workshop is a short version of the full RDM Support workshop "Best Practices in Writing Reproducible Code". 
 Information on that workshop can be found [on the RDM Support website](https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code).
 
-## Contents of this workshop (TODO: update this)
+## Contents of this workshop 
 
-1. Introduction (Dorien, 5 mins)
-2. Project structure (Dorien, 5 mins)
-3. Documentation (Dorien, 5 mins)
-4. Code quality (Jelle, 5 mins)
-5. Git and GitHub (Jelle, demo and exercise)
-   - Explanation
-   - Beginners: create a GitHub account and make a GitHub repository with the project template + write a README file in there
-   - More advanced: pick a course from skills.github.com
-7. Closing (2 mins)
-   a. RDM workshops and services (programming cafe, walk-in hours, RepCo workshop)
-   b. Useful resources such as
-      - [Software Development Guide by the Netherlands eScience Center](https://guide.esciencecenter.nl/)
-      - [The Turing Way: a guide to reproducible data science by the Turing Institute](https://the-turing-way.netlify.app/welcome)
-      - [Software Carpentry lessons](https://github.com/swcarpentry/swcarpentry)
-      - [Pro GIT](https://www.git-scm.com/book/en/v2)
-      - [Good Enough Practices in Scientific Computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
+1. Introduction (5 min)
+2. Project structure ( 5 min)
+3. Documentation (5 min)
+4. Code quality (5 min)
+5. Git and GitHub (10 min)  
+   EXERCISES  
+6. Closing (2 mins)
+
+## Exercises
+
+### For people new to Git and GitHub
+We learn to do some basic things with GitHub via the GitHub website.
+
+#### Step 1: Create a GitHub account [https://github.com/signup](https://github.com/signup)
+
+#### Step 2: Go to this template repository and browse it: [github.com/UtrechtUniversity/simple-python-template](https://github.com/UtrechtUniversity/simple-python-template)
+
+#### Step 3: Clone the repository:
+
+- Go back to the [main page](https://github.com/UtrechtUniversity/simple-python-template) of the repository and click the green 'Use this template' button. 
+- A drop down menu will appear. Select 'Create a new repository'
+- Choose a repository name, e.g. `my-first-github-repository`. If interested, read more on [repository naming conventions](https://climbtheladder.com/10-github-repository-naming-best-practices/)
+- Choose 'public', which means everyone can see this repository
+- Click 'Create repository'
+
+
+# Step 4: Make a change to the README file
+After creating the repository you automatically land on the main page of the repository that is findable under `github.com/<your profile name>/<your repository name>`. The page displays the contents of the repository and underneath the contents of the `README.md` file. We will now make a change to the README file.
+
+- Click the pencil icon at the top right of the README file to edit the file.
+
+
+
+
+
+
+
 
 ## License
 
