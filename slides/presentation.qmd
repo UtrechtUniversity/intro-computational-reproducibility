@@ -92,8 +92,7 @@ See also: Five selfish reasons to work reproducibly ([Markowetz, 2015](https://d
 - 💻 The dependencies to run the code on the data (operating system, software, packages, etc.)
 
 -   💬 Documentation, documentation, documentation
-
-::: 
+:::
 :::
 
 ## Reproducibility spectrum
@@ -150,19 +149,7 @@ A study may be more or less reproducible than another depending on what data and
 :::
 
 ::: {.column width="40%"}
-```
-├───data
-│   ├───raw
-│   ├───processed
-│   └───temp
-├───docs
-├───results
-│   ├───figures
-│   └───output
-├───src
-├README.md
-└LICENSE
-```
+![](images/exampleproject.png)
 :::
 :::
 
@@ -488,7 +475,7 @@ Code you reuse often, is often a good candidate for a function
 :::
 ::: {.column width="35%"}
 
-![](./images/screenshots/distributed.png){fig-align="center" width=80%}
+![](./images/distributed.png){fig-align="center" width=80%}
 
 :::
 ::::
