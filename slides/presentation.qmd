@@ -24,13 +24,13 @@ execute:
 
 # Introduction to Computational Reproducibility {data-background-color="#FFCD00"}
 
-::: theme-section
+::: {.theme-section-large}
 <https://edu.nl/a4qwd>
 :::
 
 ## Contents
 
-::: theme-section
+::: {.theme-section-large}
 1.  What is reproducibility?
 2.  Project organization
 3.  Documentation
@@ -43,27 +43,36 @@ execute:
 
 ## Reproducibility
 
+::: {.theme-section-large}
+
 > A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer. ([The Turing Way Community, 2022](https://book.the-turing-way.org/reproducible-research/overview/overview-definitions))
 
-![](images/reproducibility_def_Scriberia-TuringWay.jpg){fig-align="center" width="70%"}
+![](images/reproducibility_def_Scriberia-TuringWay.jpg){fig-align="center" width="50%"}
+:::
 
 ::: footer
-The image was created by [Scriberia](http://www.scriberia.co.uk/) for The Turing Way community and is used under a CC-BY licence. <https://doi.org/10.5281/zenodo.3332808>.
+Image: [Scriberia](http://www.scriberia.co.uk/) for The Turing Way community (CC-BY).  <https://doi.org/10.5281/zenodo.3332808>.
 :::
 
 ## Why reproducible code?
 
+::: {.theme-section-large}
+
 ::: columns
-::: {.column width="70%"}
+::: {.column width="60%"}
+::: {.incremental}
 -   Know what you did last summer (without having to memorize it)
 -   Trust that your results are reliable and correct
 -   Others can re-use your methods
 -   Transparent science = trust in its results
 :::
-
-::: {.column width="30%"}
-![](https://imgs.xkcd.com/comics/future_self.png)
 :::
+
+::: {.column width="40%"}
+![](https://imgs.xkcd.com/comics/future_self.png){width="75%"}
+:::
+:::
+
 :::
 
 ::: footer
@@ -72,29 +81,29 @@ See also: Five selfish reasons to work reproducibly ([Markowetz, 2015](https://d
 
 ## What is needed for reproducibility?
 
+::: {.theme-section-large}
+::: {.incremental}
 - 🗄️ The data
-
-. . .
 
 - 📰 The code
 
-. . .
-
 - 🧾 The analysis workflow
-
-. . .
 
 - 💻 The dependencies to run the code on the data (operating system, software, packages, etc.)
 
-. . .
-
 -   💬 Documentation, documentation, documentation
+:::
+:::
 
 ## Reproducibility spectrum
 
-![](images/peng2011_reproducibility-spectrum.jpg)
+::: {.theme-section-large}
+
+![](images/peng2011_reproducibility-spectrum.jpg){fig-align="center" width="80%"}
 
 A study may be more or less reproducible than another depending on what data and code are made available ([Peng, 2011](https://doi.org/10.1126%2Fscience.1213847)).
+
+:::
 
 # 2. Project organization
 
@@ -135,22 +144,12 @@ A study may be more or less reproducible than another depending on what data and
 - Put all project-related documents in 1 project folder
 - Separate raw, intermediate and end outputs
 - Never edit raw data
+
+    
 :::
 
 ::: {.column width="40%"}
-```
-├───data
-│   ├───raw
-│   ├───processed
-│   └───temp
-├───docs
-├───results
-│   ├───figures
-│   └───output
-├───src
-├README.md
-└LICENSE
-```
+![](images/exampleproject.png)
 :::
 :::
 
@@ -167,10 +166,12 @@ Project templates: [UtrechtUniversity/simple-r-project](https://github.com/Utrec
 ::: columns
 ::: {.column width="40%"}
 
+::: {.incremental}
 - Meaningful & human-readable
 - No special characters (`&` `%` `$` `#` `/` `,` `+`), spaces or dots (`.`)
 - < 25 characters
 - Separate meaningful chunks by `-` or `_`
+:::
 
 :::
 
@@ -190,27 +191,27 @@ Images: [OSF's File naming Guide](https://help.osf.io/article/146-file-naming)
 
 ## What is documentation?
 
+::: {.theme-section-large}
+::: {.incremental}
 > Documentation provides context for your work. It allows your collaborators, colleagues and future you to understand what has been done and why. ([The Turing Way Community, 2022](https://book.the-turing-way.org/reproducible-research/rdm/rdm-metadata.html))
-
-. . .
 
 For example:
 
 - Project documentation (project proposal, analysis log, **README file**, etc.)
 
-. . .
-
 - Data documentation (e.g., codebook)
-
-. . .
 
 - Code documentation (e.g., **comments**, requirements.txt)
 
+:::
+:::
+
 ## README file
+
+::: {.theme-section-large}
 
 ::: columns
 ::: {.column width="50%"}
-
 #### Project information:
 
 - Who, what, when, where?
@@ -233,11 +234,15 @@ For example:
 :::
 :::
 
+:::
+
 ::: footer
 See Utrecht University's [FAIR code cheatsheet](https://utrechtuniversity.github.io/FAIR-Cheatsheets/) and <https://www.makeareadme.com/>
 :::
 
 ## Comments
+
+::: {.theme-section-large}
 
 ::: columns
 ::: {.column width="73%"}
@@ -260,6 +265,7 @@ Comments: annotations in your code that explain what your code does (to others, 
 ![](images/comments.jpeg)
 :::
 :::
+:::
 
 ::: footer
 Image source: [Geek & Poke](https://geekandpoke.typepad.com/geekandpoke/2011/06/code-commenting-made-easy.html)
@@ -269,26 +275,22 @@ Image source: [Geek & Poke](https://geekandpoke.typepad.com/geekandpoke/2011/06/
 
 ## Aspects of good quality code
 
+::: {.theme-section-large}
+
 :::: {.columns}
 
 ::: {.column width="45%"}
-
-::: {style="text-align: left; margin-top: 2em"}
-
 - Readable
 - Reusable
 - (Robust)
+:::
 
-:::
-:::
-::: {.column width="0%"}
-:::
 ::: {.column width="55%"}
-
 ![Source: [xkcd](https://xkcd.com/1513/)](https://imgs.xkcd.com/comics/good_code.png){fig-align="center" width=50%}
 
 :::
 ::::
+:::
 
 ## Code readability: white space
 
@@ -473,7 +475,7 @@ Code you reuse often, is often a good candidate for a function
 :::
 ::: {.column width="35%"}
 
-![](./images/screenshots/distributed.png){fig-align="center" width=80%}
+![](./images/distributed.png){fig-align="center" width=80%}
 
 :::
 ::::
@@ -542,25 +544,40 @@ edu.nl/TODO ADD LINK
 
 ## Bonus: dissemination
 
+::: {.theme-section-large}
+::: {.incremental}
 - [Add a license](https://coderefinery.github.io/github-without-command-line/creating-using-web/#step-7-optional-adding-a-license-to-an-existing-repository) to your project
-
-. . .
 
 - Specify how people should [cite your code](https://citation-file-format.github.io/)
 
-. . .
-
 - Publish your [GitHub code on Zenodo](https://coderefinery.github.io/github-without-command-line/doi/) to get a DOI
 
+:::
+:::
 
-## Resources
+## Learn more
+
+::: {.theme-section}
+
+RDM Support UU:
 
 -   [Best Practices in Writing Reproducible Code](https://www.uu.nl/en/research/research-data-management/training-workshops/best-practices-for-writing-reproducible-code) (workshop)
 -   [Programming Cafe](https://www.uu.nl/en/research/research-data-management/workshops/programming-cafe) (monthly)
 -   [Walk-In Hours Research Data & Software](https://www.uu.nl/en/research/research-data-management/workshops/walk-in-hours-research-data-and-software) (weekly)
 
+::: {.fragment}
+Further reading:
+
+- [The Turing Way: a guide to reproducible data science](https://book.the-turing-way.org/)
+- [Software Development Guide by the Netherlands eScience Center](https://guide.esciencecenter.nl/)
+- [Software Carpentry lessons](https://github.com/swcarpentry/swcarpentry)
+- [Learn git branching](https://learngitbranching.js.org/) and [Pro GIT](https://www.git-scm.com/book/en/v2)
+- [Good Enough Practices in Scientific Computing](https://doi.org/10.1371/journal.pcbi.1005510)
+:::
+:::
+
 # Thank you! {data-background-color="#FFCD00"}
 
-::: theme-section
+::: theme-section-large
 <https://uu.nl/rdm>
 :::
