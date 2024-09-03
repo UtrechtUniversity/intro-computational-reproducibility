@@ -294,7 +294,7 @@ Image source: [Geek & Poke](https://geekandpoke.typepad.com/geekandpoke/2011/06/
 
 ## Code readability: white space
 
-::: {.theme-section}
+::: {.theme-section-large}
 
 ::: {.fragment .strike}
 Code is for computer, comments are for humans.
@@ -344,7 +344,7 @@ print(hurts)
 
 ## Code readability: names
 
-::: {.theme-section}
+::: {.theme-section-large}
 
 - use descriptive names for functions and variables
   - start functions with a verb
@@ -375,7 +375,7 @@ for item in basket:
 
 ## Code readability: consistency
 
-::: {.theme-section}
+::: {.theme-section-large}
 Consistency will make your code easier to understand and maintain
 
   - consult a styleguide for your language (keep conventions, and don't reinvent the wheel)
@@ -416,7 +416,7 @@ Code you reuse often, is often a good candidate for a function
 
 ## Code quality: concluding remarks 
 
-::: {.theme-section}
+::: {.theme-section-large}
 
 - Code quality is important for reproducibility
 - Not only by others, but most importantly future YOU
@@ -425,8 +425,6 @@ Code you reuse often, is often a good candidate for a function
 :::
 
 # 5. Git and GitHub
-
-## GitHub
 
 ## Why do you need version control?
 
@@ -483,7 +481,7 @@ Code you reuse often, is often a good candidate for a function
 
 ## GitHub, GitLab, Bitbucket, etc..
 
-::: {.theme-section}
+::: {.theme-section-large}
 
 :::: {.columns}
 
@@ -501,7 +499,7 @@ Code you reuse often, is often a good candidate for a function
 :::
 ::: {.column width="35%"}
 
-![](./images/screenshots/distributed.png){fig-align="center" width=80%}
+![](./images/distributed.png){fig-align="center" width=80%}
 
 :::
 ::::
@@ -509,7 +507,7 @@ Code you reuse often, is often a good candidate for a function
 
 ## Terminology
 
-::: {.theme-section}
+::: {.theme-section-large}
 
 - **Repository**: a project folder that is being tracked by git
 - **Commit**: a snapshot of your project at a certain point in time
@@ -524,22 +522,22 @@ Code you reuse often, is often a good candidate for a function
 
 ## Working with git
 
-::: {.theme-section}
+::: {.theme-section-large}
 - Firstly designed as a command line tool
 - Now also built into many IDEs (Rstudio, Visual Studio Code, etc.)
 - GUIs available (GitHub Desktop, Sourcetree, etc.)
-- Develop and run you code on your PC, regularly store your changes in git and push them to GitHub
+- Work on your PC, push to GitHub
 - Making changes via the GitHub website is also possible
 :::
 
 ## Your turn: starting with git
 
-::: {.theme-section}
-Learning to use git efficiently takes time and practice.
-Take a course or workshop, or follow online tutorials to get started.
-We will now do a short workshop to familiarize you with GitHub
+::: {.theme-section-large}
+- Learning to use git efficiently takes time and practice.  
+- Take a course or workshop, or follow online tutorials to get started.
+- We will now do a short workshop to familiarize you with GitHub
 
-edu.nl/TODO ADD LINK
+edu.nl/a4qwd
 :::
 
 ## Bonus: dissemination
