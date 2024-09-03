@@ -9,10 +9,10 @@ Information on that workshop can be found [on the RDM Support website](https://w
 1. Introduction (5 min)
 2. Project structure ( 5 min)
 3. Documentation (5 min)
-4. Code quality (5 min)
+4. Code quality (10 min)
 5. Git and GitHub (10 min)  
-   EXERCISES  
-6. Closing (2 mins)
+   EXERCISES  (30 min)
+6. Closing (5 mins)
 
 ## Exercises
 
