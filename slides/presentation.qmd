@@ -537,7 +537,7 @@ Code you reuse often, is often a good candidate for a function
 - Take a course or workshop, or follow online tutorials to get started.
 - We will now do a short workshop to familiarize you with GitHub
 
-edu.nl/a4qwd
+[edu.nl/6gn8x](https://edu.nl/6gn8x)
 :::
 
 ## Bonus: dissemination
