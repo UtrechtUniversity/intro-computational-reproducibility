@@ -396,12 +396,7 @@ Consistency will make your code easier to understand and maintain
 
 ## Code reusability: some guidelines
 
-::: {.theme-section}
-
-- **Separate code and data**: data is specific, code need not be
-
-  - consider using a config file for project-specific (meta)data
-  - but DO hard-code unchanging variables, e.g. `gravity = 9.80665`, **once**.
+::: {.theme-section-large}
 
 - **Do One Thing** (and do it well)
 
@@ -410,7 +405,18 @@ Consistency will make your code easier to understand and maintain
 
 Identify potential functions by action: functions perform tasks (e.g. sorting, plotting, saving a file, transform data...)
 
-Code you reuse often, is often a good candidate for a function
+If you copy-paste a piece of code, it is often a good candidate for a function
+
+:::
+
+## Code reusability: some guidelines
+
+::: {.theme-section-large}
+
+- **Separate code and data**: data is specific, code need not be
+
+  - consider using a config file for project-specific (meta)data
+  - but DO hard-code unchanging variables, e.g. `gravity = 9.80665`, **once**.
 
 :::
 
@@ -514,6 +520,7 @@ Code you reuse often, is often a good candidate for a function
 - **Branch**: a parallel version of your project
 - **Clone**: a copy of a GitHub repository on your PC
 
+[github.com/UtrechtUniversity](https://github.com/utrechtuniversity)
 :::
 
 ## Git History
